@@ -1,0 +1,3 @@
+a=["vams","nizar","kavin"]
+b=list(map(lambda a:sum(ch in 'aeiouAEIOU'for ch in a),a))
+print(b)
