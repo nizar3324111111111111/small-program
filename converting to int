@@ -1,0 +1,6 @@
+a="47654"
+b=0
+for i in a:
+    x=ord(i)-ord(0)
+    b=b*10+x
+print(b)
