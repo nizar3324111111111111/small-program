@@ -1,0 +1,52 @@
+create database college;
+use college;
+
+create table b1(id int, name varchar(10));
+insert into b1 values (100, "kavin");
+insert into b1 values (101, "vams");
+insert into b1 values (102, "pavi");
+select * from b1;
+
+create table b2(id int primary key, name char(10));
+insert into b2 values (100, "kavin");
+insert into b2 values (101, "vams");
+insert into b2 values (102, "pavi");
+desc b2;
+select * from b2;
+
+
+create table b3 select * from b2;
+select * from b3;
+
+create table b4(id int primary key, name char(10),gen enum("Male","Female"));
+insert into b4 values (55, "kain","Male");
+desc b4;
+select * from b4;
+
+create table b5(id int, name char(10) default "pavi");
+insert into b5 values (1);
+desc b5;
+select * from b5;
+
+create table b6(id int unique key, name char(10));
+insert into b6 values (5, "Pavi");
+insert into b6 values (1, "Kavin");                                                                                                                                                                                                                                                                
+desc b6;
+select * from b6;
+
+create table b7(name varchar(10),sal int, bonus int,tot int generated always as (sal+bonus) );
+insert into b7 (name,sal,bonus) values ( "ka",100,100);
+desc b7;
+select * from b7;
+
+rename table b1 to b77;
+
+
+
+
+
+
+
+
+
+
